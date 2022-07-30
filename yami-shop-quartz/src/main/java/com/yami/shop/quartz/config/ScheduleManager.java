@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
  *
  * @author lgh
  */
-@Component
+//@Component
 @AllArgsConstructor
 public class ScheduleManager {
     private final static String JOB_NAME = "TASK_";

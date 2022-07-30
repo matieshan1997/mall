@@ -30,7 +30,7 @@ import java.util.List;
  * 
  * @author lgh
  */
-@Service
+//@Service
 public class ScheduleJobServiceImpl extends ServiceImpl<ScheduleJobMapper, ScheduleJob> implements ScheduleJobService {
 	
 	@Autowired
