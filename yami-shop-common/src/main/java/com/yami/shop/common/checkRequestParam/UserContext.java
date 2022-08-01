@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.yami.shop.common.filter;
+package com.yami.shop.common.checkRequestParam;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -51,11 +51,9 @@ public class UserContext {
     @AllArgsConstructor
     static class User {
 
-        private String loginRealName;
+        private String username;
 
-        private String loginUserId;
-
-        private String loginUserName;
+        private String userRole;
 
     }
 }

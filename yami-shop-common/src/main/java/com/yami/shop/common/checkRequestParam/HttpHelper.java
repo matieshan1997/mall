@@ -1,4 +1,4 @@
-package com.yami.shop.common.filter;
+package com.yami.shop.common.checkRequestParam;
 
 import javax.servlet.ServletRequest;
 import java.io.BufferedReader;
