@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.yami.shop.common.checkRequestParam;
+package com.yami.shop.common.checkRequestParamFilter;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

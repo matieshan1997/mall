@@ -1,4 +1,4 @@
-package com.yami.shop.common.checkRequestParam;
+package com.yami.shop.common.checkRequestParamFilter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Component;
