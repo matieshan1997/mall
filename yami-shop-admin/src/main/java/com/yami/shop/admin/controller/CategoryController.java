@@ -13,6 +13,7 @@ package com.yami.shop.admin.controller;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.yami.shop.bean.model.Category;
 import com.yami.shop.common.annotation.SysLog;
+import com.yami.shop.common.checkRequestParamFilter.UserContext;
 import com.yami.shop.common.exception.YamiShopBindException;
 import com.yami.shop.security.admin.util.SecurityUtils;
 import com.yami.shop.service.CategoryService;
@@ -64,18 +65,21 @@ public class CategoryController {
 	/**
 	 * 保存分类
 	 */
-	@SysLog("保存分类")
+//	@SysLog("保存分类")
 	@PostMapping
-	@PreAuthorize("@pms.hasPermission('prod:category:save')")
+//	@PreAuthorize("@pms.hasPermission('prod:category:save')")
 	public ResponseEntity<Void> save(@RequestBody Category category){
-		category.setShopId(SecurityUtils.getSysUser().getShopId());
+//		category.setShopId(SecurityUtils.getSysUser().getShopId());
 		category.setRecTime(new Date());
-		Category categoryName = categoryService.getOne(new LambdaQueryWrapper<Category>().eq(Category::getCategoryName,category.getCategoryName())
-				.eq(Category::getShopId,category.getShopId()));
-		if(categoryName != null){
-			throw new YamiShopBindException("类目名称已存在！");
-		}
-		categoryService.saveCategroy(category);
+//		Category categoryName = categoryService.getOne(new LambdaQueryWrapper<Category>().eq(Category::getCategoryName,category.getCategoryName())
+//				.eq(Category::getShopId,category.getShopId()));
+//		if(categoryName != null){
+//			throw new YamiShopBindException("类目名称已存在！");
+//		}
+//		categoryService.saveCategroy(category);
+		System.out.println(category);
+		System.out.println(UserContext.getUserName());
+		System.out.println(UserContext.getUserRole());
 		return ResponseEntity.ok().build();
 	}
 
